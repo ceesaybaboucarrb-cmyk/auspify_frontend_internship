@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baboucarr B. Ceesay | Portfolio</title>
+  <meta name="description" content="Portfolio of Baboucarr B. Ceesay, a student at the University of The Gambia: projects, skills and achievements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap bar">
+      <a class="brand" href="#top" aria-label="Baboucarr B. Ceesay, back to top">B. Ceesay</a>
+
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="tools">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 0 1 9.5 3a8.5 8.5 0 1 0 11.5 11.5Z" fill="currentColor"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Baboucarr B. Ceesay</h1>
+        <p class="lead">Student at the University of The Gambia, learning to build clear, useful things for the web and writing about how technology can serve people at home.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="#contact">Send a message</a>
+        </div>
+      </div>
+
+      <!-- the river: drawn once on page load -->
+      <svg class="river" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path class="river-line r1" d="M0 70 C 150 20, 250 120, 400 70 S 650 20, 800 70 S 1050 120, 1200 60"/>
+        <path class="river-line r2" d="M0 92 C 150 42, 250 142, 400 92 S 650 42, 800 92 S 1050 142, 1200 82"/>
+      </svg>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about-text">
+          <h2>About me</h2>
+          <p>I am a university student at the University of The Gambia. My coursework covers information resource management, data structures and algorithms, networking, research methods, cybersecurity and e-business, so I look at technology from both the system side and the people side.</p>
+          <p>Alongside my studies I serve as Minister of Sports for the Inter-Tertiary Collaborative Association (ITCA), where I handle official correspondence and administration. That work taught me to communicate clearly and finish what I start.</p>
+          <p>Right now I am growing my frontend skills through the Auspify Technologies internship program.</p>
+        </div>
+        <dl class="facts">
+          <div><dt>Studying at</dt><dd>University of The Gambia</dd></div>
+          <div><dt>Leading</dt><dd>Sports Ministry, ITCA</dd></div>
+          <div><dt>Learning</dt><dd>Frontend development</dd></div>
+          <div><dt>Based in</dt><dd>The Gambia</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section alt" id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-filter="research" aria-pressed="false">Research</button>
+          <button type="button" class="chip" data-filter="web" aria-pressed="false">Web</button>
+          <button type="button" class="chip" data-filter="leadership" aria-pressed="false">Leadership</button>
+        </div>
+
+        <div class="projects" id="projectGrid">
+          <article class="card" data-category="research">
+            <span class="tag">Research</span>
+            <h3>AI in Healthcare Delivery in The Gambia</h3>
+            <p>A five-chapter academic thesis examining how artificial intelligence could improve healthcare delivery in The Gambia.</p>
+          </article>
+
+          <article class="card" data-category="web">
+            <span class="tag">Web</span>
+            <h3>Dynamic To-Do Application</h3>
+            <p>A task manager built with JavaScript. Add, edit, complete and delete tasks, with everything saved in your browser.</p>
+            <a class="card-link" href="../task3-todo/index.html">Open the app</a>
+          </article>
+
+          <article class="card" data-category="web">
+            <span class="tag">Web</span>
+            <h3>This portfolio</h3>
+            <p>Hand-built with HTML, CSS and JavaScript. Uses Flexbox, Grid, a light and dark theme, and a validated contact form.</p>
+          </article>
+
+          <article class="card" data-category="leadership">
+            <span class="tag">Leadership</span>
+            <h3>ITCA Sports Ministry</h3>
+            <p>Official correspondence and administration for sports activities across the Inter-Tertiary Collaborative Association.</p>
+          </article>
+        </div>
+        <p class="empty" id="projectEmpty" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <h2>Skills</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3>Web development</h3>
+            <ul class="skill-list">
+              <li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>Grid</li><li>JavaScript</li><li>Responsive design</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Computer science</h3>
+            <ul class="skill-list">
+              <li>Data structures and algorithms</li><li>Networking</li><li>Cybersecurity</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Information and research</h3>
+            <ul class="skill-list">
+              <li>Information resource management</li><li>Research methods</li><li>E-business</li><li>Official correspondence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section alt" id="achievements">
+      <div class="wrap">
+        <h2>Achievements</h2>
+        <ul class="achievements">
+          <li>
+            <h3>Minister of Sports, ITCA</h3>
+            <p>Leads sports affairs for the Inter-Tertiary Collaborative Association.</p>
+          </li>
+          <li>
+            <h3>Research thesis on AI in healthcare</h3>
+            <p>A five-chapter academic thesis on AI in healthcare delivery in The Gambia.</p>
+          </li>
+          <li>
+            <h3>Frontend Developer intern, Auspify Technologies</h3>
+            <p>Building real projects in a four-week remote internship program.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact">
+        <div>
+          <h2>Contact</h2>
+          <p>Have a question, an opportunity or a project in mind? Write to me and I will reply as soon as I can.</p>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required minlength="2">
+            <p class="error" id="nameError" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <p class="error" id="emailError" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="600"></textarea>
+            <p class="counter"><span id="count">0</span> / 600</p>
+            <p class="error" id="messageError" role="alert"></p>
+          </div>
+          <button class="btn primary" type="submit">Send message</button>
+          <p class="status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>&copy; <span id="year"></span> Baboucarr B. Ceesay</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
